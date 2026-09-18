@@ -163,8 +163,11 @@ func parseArgs(args: ArrayList<String>): ?CliOpts {
     Some(o)
 }
 
-// lambda-friendly numeric fetch: unparseable -> -1 (rejected/clamped per flag)
+// lambda-friendly numeric fetch: unparseable -> -1 (rejected/clamped per
+// flag). The config parameter is accepted for call-site uniformity with
+// flags that consult per-field defaults (cjlint G.FUN.02 accepted here).
 func num(v: String, c: NetemConfig): Int64 {
+    let _ = c
     match (parseI64(v)) {
         case Some(n) => n
         case None => -1

@@ -1,0 +1,10 @@
+
+# Local build, registry and verification outputs
+**/target/
+**/build/
+**/dist/
+**/cangjie-repo.toml*
+.DS_Store
+pcap-test-output*
+pcap-timestamp-sweep.txt
+cookie-curl-capture/

@@ -1,0 +1,2 @@
+[workspace]
+members = ["ignetmirror-0.1.0", "ignetmirror_demo", "ignetmirror_test"]
